@@ -1,3 +1,6 @@
+/* Importando fontes */
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Catamaran:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 /* Reset básico para garantir consistência */
 * {
     margin: 0;
@@ -7,7 +10,7 @@
 
 /* Corpo do documento */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
@@ -16,6 +19,7 @@ body {
     min-height: 100vh;
 }
 
+/* Contêiner Responsivo */
 .container {
     width: 100%;
     max-width: 1200px;
@@ -36,11 +40,6 @@ header {
     align-items: center;
 }
 
-.header-bar {
-    background-color: #000a7c;
-    height: fit-content;
-}
-
 .logo {
     flex: 1;
 }
@@ -55,7 +54,12 @@ header {
     text-align: center;
 }
 
-/* Menu Nav */
+/* Estilos do Nav */
+.header-bar {
+    background-color: #000a7c;
+    height: fit-content;
+}
+
 nav ul {
     list-style: none;
     display: flex;
@@ -70,6 +74,7 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #e8ebed;
+    font-family: 'Catamaran', sans-serif;
     font-weight: bold;
     padding: 5px 10px;
     transition: background-color 0.3s;
@@ -80,7 +85,6 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
-/* Dropdown Menu */
 nav ul li .dropdown-menu {
     display: none;
     position: absolute;
@@ -129,16 +133,22 @@ main section {
 }
 
 /* Tipografia e Títulos */
-h2, h3, p {
-    margin: 20px 0;
+h1, h2 {
+    font-family: 'Roboto', sans-serif;
 }
 
-.section-item h2 {
-    margin: 0;
+h3, h4, nav ul, a, .btn, ol, ul {
+    font-family: 'Catamaran', sans-serif;
 }
 
 p {
+    font-family: 'Asap', sans-serif;
     text-indent: 20px;
+    margin: 20px 0;
+}
+
+h1, h2, h3, h4 {
+    margin: 20px 0;
 }
 
 /* Links desativados */
@@ -151,6 +161,11 @@ a.desativado {
 }
 
 /* Listas */
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
 ol.lista-pagina li {
     padding: 5px 0;
 }
@@ -230,13 +245,6 @@ a.btn {
 
 .btn3 {
     background-color: #6a11cb;
-}
-
-iframe {
-    display: block;
-    margin: 10px auto;
-    height: 320px;
-    width: 100%;
 }
 
 /* Estilos do Footer */
@@ -348,7 +356,7 @@ footer ul a:hover {
     display: none;
 }
 
-/* Media Queries */
+/* Melhorias na responsividade para diferentes breakpoints */
 
 /* Extra Small (xs) */
 @media (max-width: 575.98px) {
@@ -502,4 +510,35 @@ footer ul a:hover {
     nav ul {
         display: flex !important;
     }
+}
+
+/* Melhorias de design e usabilidade */
+
+.logo img {
+    transition: transform 0.3s;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+.lista-principal li {
+    background: #eee;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.lista-principal li:hover {
+    transform: scale(1.02);
+}
+
+.lista-principal li i {
+    font-size: 1.5rem;
+}
+
+.footer-content img {
+    transition: transform 0.3s;
+}
+
+.footer-content img:hover {
+    transform: scale(1.1);
 }
