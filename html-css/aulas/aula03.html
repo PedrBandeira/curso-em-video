@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../css/estilo-principal.css">
+        <link rel="stylesheet" href="../../css/estilo-artigo.css">
+        <link rel="shortcut icon" href="../../imagens/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <title>03 - Como funciona HTML e CSS</title>
+    </head>
+    <body>
+        <header>
+            <div class="container header-content">
+                <div class="logo">
+                    <a href="../index.html">
+                        <img src="../../imagens/cursoemvideo-logo-branca.png" alt="Curso em Vídeo">
+                    </a>
+                </div>
+                <h1 class="titulo">Como funciona HTML e CSS</h1>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <div class="button-container">
+                    <a href="../aulas/aula02.html" class="btn btn1"><i class="bi bi-arrow-left-circle-fill"></i> Anterior</a>
+                    <a href="../index.html" class="btn btn2"><i class="bi bi-house-door-fill"></i> Página Inicial</a>
+                    <a href="../aulas/aula04.html" class="btn btn3">Próxima Aula <i class="bi bi-arrow-right-circle-fill"></i></a>
+                </div>
+                <section class="section-item">
+                    <h2>Como funciona a HTML e as CSS?</h2>
+                    <p>Pode ser estranho pra você ler “a HTML” e também “as CSS”. Muita gente trata as duas tecnologias com o ar@go masculino na maioria das vezes. Na verdade, isso nem está totalmente errado, mas eu sempre vou considerar defini-las pela tradução dos seus termos. HTML é uma Linguagem de Marcação Hipertexto. CSS são as Folhas de Es@lo em Cascata. Notou que são termos em feminino? Pois as polêmicas não param por aqui não…</p>
+                    <h3>“Eu <del>programo</del> em HTML”</h3>
+                    <p>Talvez você já tenha ouvido alguém falar a frase acima. Geralmente ela é dita por pessoas iniciantes ou então aqueles que se baseiam apenas na capa de um único livro da série <strong>Head First</strong> (use a cabeça), que estampa na capa <em>“programação em HTML5”.</em></p>
+                    <p>Acontece que a própria sigla já entrega seu objetivo: <strong>Hypertext Markup Language</strong> traduzido para o bom e velho Português significa <strong>Linguagem de Marcação Hipertexto</strong>. Você vai notar daqui a pouco que ela não funciona com instruções, como toda linguagem de programação. A HTML é baseada em marcações chamadas <strong>tags</strong>, e elas comandam tudo.</p>
+                    <p>Além disso, o termo <strong>“programação”</strong> envolve estruturas especializadas que dependem do uso de <strong>variáveis simples</strong> e <strong>compostas, condições, laços</strong> e até coisas mais complexas como <strong>objetos.</strong> Nada disso existe na HTML nem nas CSS. Por outro lado, todas essas características estão presentes na linguagem <strong>JavaScript</strong>. Essa sim é uma <strong>Linguagem de Programação.</strong></p>
+                    <p>HTML trabalha fundamentada apenas nas marcas ou etiquetas (do Inglês tag) e as CSS funcionam baseadas nos seletores, propriedades e valores. Você vai entender mais sobre isso mais pra frente.</p>
+                </section>
+                <div class="button-container">
+                    <a href="../aulas/aula02.html" class="btn btn1"><i class="bi bi-arrow-left-circle-fill"></i> Anterior</a>
+                    <a href="../index.html" class="btn btn2"><i class="bi bi-house-door-fill"></i> Página Inicial</a>
+                    <a href="../aulas/aula04.html" class="btn btn3">Próxima Aula <i class="bi bi-arrow-right-circle-fill"></i></a>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div>
+                        <a href="https://www.cursoemvideo.com/"c>
+                        <img src="../../imagens/cursoemvideo-logo.png" alt="Curso em Vídeo">
+                        </a>
+                        <p id="sobre"><a href="https://www.cursoemvideo.com/" target="_blank">Curso em Vídeo</a> é uma empresa brasileira legalmente estabelecida e presta serviços educacionais a distância e consultoria para empresas</p>
+                    </div>
+                    <div class="social-media">
+                        <ul>
+                            <li><a href="https://www.instagram.com/cursoemvideo/" target="_blank"><i class="bi bi-instagram"></i></a></li>
+                            <li><a href="https://facebook.com/cursosemvideo" target="_blank"><i class="bi bi-facebook"></i></a></li>
+                            <li><a href="https://twitter.com/guanabara" target="_blank"><i class="bi bi-twitter-x"></i></a></li>
+                            <li><a href="https://youtube.com/cursoemvideo" target="_blank"><i class="bi bi-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                    <p>Todos os direitos reservados ao <a href="https://www.cursoemvideo.com/" target="_blank">CursoEmVídeo</a>&copy;</p>
+                </div>
+            </div>
+            <a href="#top" class="deVoltaAoTopo">
+            <i class="bi bi-arrow-up-circle"></i>
+            </a>
+        </footer>
+        <script>
+            const botaoTop = document.querySelector(".deVoltaAoTopo");
+            
+            window.addEventListener("scroll", () => {
+                if (window.pageYOffset > 300) {
+                    botaoTop.classList.add("show");
+                } else {
+                    botaoTop.classList.remove("show");
+                }
+            });
+            
+            botaoTop.addEventListener("click", (e) => {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            });
+        </script>
+    </body>
+</html>
